@@ -2,7 +2,7 @@
 	<h1 align="center">Uploader <small>drag and drop</small></h1>
 	<h4>or click to open dialog</h4>
 	<p>Left here to upload in your $HOME directory<br />
-	<small>$HOME = <? echo $_SESSION['home']; ?>; Max file size = <? echo ini_get('upload_max_filesize') ?>; Max file num = <? echo ini_get('max_file_uploads') ?></small></p>
+	<small>$HOME = <?php echo $_SESSION['home']; ?>; Max file size = <?php echo ini_get('upload_max_filesize') ?>; Max file num = <?php echo ini_get('max_file_uploads') ?></small></p>
 </div>
 <form class="form-actions"  method="post" action="upload_scp.php" enctype="multipart/form-data">
 	<input id="input_file" style="display:none;" type="file" multiple="" name="filesToUpload[]"/>

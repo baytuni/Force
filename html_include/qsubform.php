@@ -32,7 +32,7 @@
 -->
 
 <!-- PHP Functions to create elements -->
-<?php
+<?<php
 
 function create_list($arrayin, $name) 
 {
@@ -376,7 +376,7 @@ function stylePreview() {
 				<a href="#" class="btn span2 btn-info" data-toggle="popover" 
 				title="Queue Selection | -q" data-content="<p>Defines  the  destination  of the job.  The destination names a queue, a server, or a queue at a server.</p><p> The qsub command will submit the script to the  server  defined by  the  destination argument.  If the destination is a routing queue, the job may be routed by the server to  a  new  destina        tion.</p><p>If the -q option is not specified, the qsub command will submit the script to the default server.</p><p>If the -q option is specified, it is in one  of  the  following three forms: <pre>queue<br/>@server<br/>queue@server</pre></p>If  the  destination argument names a queue and does not name a  server, the job will be submitted to the  named  queue  at  the default server." 
 				data-html="true" data-container="body">Queue selection</a>
-				<? echo create_list($world['queue_list'],"BatchSelection"); ?>
+				<?php echo create_list($world['queue_list'],"BatchSelection"); ?>
 			</div>
 		</div>
 		<br/>	
@@ -622,37 +622,37 @@ where job_name is the name of  the  job,  see  -N  option,  and sequence_number 
 				<tr>
 				<td class="tdelem">$USER</td>
 				<td class="tdelem"></td>
-				<td><pre><code><? echo ssh2_exec2($_SESSION['username'],$_SESSION['password'],'echo $USER'); ?></code></pre></td>
+				<td><pre><code><?php echo ssh2_exec2($_SESSION['username'],$_SESSION['password'],'echo $USER'); ?></code></pre></td>
 				</tr>
 				<tr>
 				<td class="tdelem">$UID</td>
 				<td class="tdelem"></td>
-				<td><pre><code><? echo ssh2_exec2($_SESSION['username'],$_SESSION['password'],'echo $UID'); ?></code></pre></td>
+				<td><pre><code><?php echo ssh2_exec2($_SESSION['username'],$_SESSION['password'],'echo $UID'); ?></code></pre></td>
 				</tr>
 				<tr>
 				<td class="tdelem">$HOME</td>
 				<td class="tdelem">$PBS_O_HOME</td>
-				<td><pre><code><? echo ssh2_exec2($_SESSION['username'],$_SESSION['password'],'echo $HOME'); ?></code></pre></td>
+				<td><pre><code><?php echo ssh2_exec2($_SESSION['username'],$_SESSION['password'],'echo $HOME'); ?></code></pre></td>
 				</tr>
 				<tr>
 				<td class="tdelem">$PATH</td>
 				<td class="tdelem">$PBS_O_PATH</td>
-				<td><pre><code><? echo ssh2_exec2($_SESSION['username'],$_SESSION['password'],'echo $PATH'); ?></code></pre></td>
+				<td><pre><code><?php echo ssh2_exec2($_SESSION['username'],$_SESSION['password'],'echo $PATH'); ?></code></pre></td>
 				</tr>
 				<tr>
 				<td class="tdelem">$SHELL</td>
 				<td class="tdelem">$PBS_O_SHELL</td>
-				<td><pre><code><? echo ssh2_exec2($_SESSION['username'],$_SESSION['password'],'echo $SHELL'); ?></code></pre></td>
+				<td><pre><code><?php echo ssh2_exec2($_SESSION['username'],$_SESSION['password'],'echo $SHELL'); ?></code></pre></td>
 				</tr>
 				<tr>
 				<td class="tdelem">$LD_LIBRARY_PATH</td>
 				<td class="tdelem"></td>
-				<td><pre><code><? echo ssh2_exec2($_SESSION['username'],$_SESSION['password'],'echo $LD_LIBRARY_PATH'); ?></code></pre></td>
+				<td><pre><code><?php echo ssh2_exec2($_SESSION['username'],$_SESSION['password'],'echo $LD_LIBRARY_PATH'); ?></code></pre></td>
 				</tr>
 				<tr>
 				<td class="tdelem">$HOSTNAME</td>
 				<td class="tdelem"></td>
-				<td><pre><code><? echo ssh2_exec2($_SESSION['username'],$_SESSION['password'],'echo $HOSTNAME'); ?></code></pre></td>
+				<td><pre><code><?php echo ssh2_exec2($_SESSION['username'],$_SESSION['password'],'echo $HOSTNAME'); ?></code></pre></td>
 				</tr>
 			</tbody>
 		</table>

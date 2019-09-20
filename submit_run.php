@@ -1,4 +1,4 @@
-<?
+<?php
 	session_start();
 	
 	include_once('globals.php');
@@ -43,7 +43,7 @@
 
 <head>
 	<title>Submission Result</title>
-	<? include_once('html_include/styles.php'); ?>
+	<?php include_once('html_include/styles.php'); ?>
 </head>
 <body>
 <div class="navbar navbar-fixed-top navbar-inverse" style="position: absolute;">
@@ -59,7 +59,7 @@
 	</div>
 </div>
 <div class="well" style="padding: 50px;">
-<?
+<?php
 	echo '<pre><code>' . $output . '</code></pre>';
 ?>
 </div>

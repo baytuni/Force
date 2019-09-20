@@ -2,7 +2,7 @@
 <!-- login.php - Matteo Ragni 2013 -->
 
 <!-- HTTPS CONTROL -->
-<?
+<?php
 
 	if(!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] == ""){
 		$redirect = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
@@ -12,7 +12,7 @@
 ?>
 
 <!-- SESSION CONTROL -->
-<? 
+<?php 
 	session_start(); 
 	include_once('globals.php');
 	
@@ -37,11 +37,11 @@
 <html>
 <!-- ##################################### -->
 	<head>
-		<title>Login @ <? echo $world['ClusterName']; ?> | PBSWebUI</title>
+		<title>Login @ <?php echo $world['ClusterName']; ?> | PBSWebUI</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		
 	<!-- Styles and scripts -->
-	<? include('html_include/styles.php'); ?>
+	<?php include('html_include/styles.php'); ?>
 	
 <!-- ###################################### -->    
 	<body>
@@ -50,16 +50,16 @@
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
-				<a class="brand" href="#"><? echo $world['ClusterName']; ?></a>
+				<a class="brand" href="#"><?php echo $world['ClusterName']; ?></a>
 				<div class="nav-collapse collapse">
 					<ul class="nav">
 						<li class="active"><a href="#"><i class="icon-user icon-white"></i> Login</a></li>
-						<li><? echo $world['GangliaURL2']; ?></li>
+						<li><?php echo $world['GangliaURL2']; ?></li>
 					</ul> 
 				</div>
 				<div class="nav-collapse pull-right">
 					<ul class="nav">
-						<li><? echo $world['AdminMail2']; ?></li>
+						<li><?php echo $world['AdminMail2']; ?></li>
 					</ul>
 				</div>
 			</div>
@@ -77,14 +77,14 @@
 			<div class="input-prepend input-append" style="position:relative; left:-2px;">
 				<button class="btn btn-primary span2" type="submit">Login</button>
 				<span class="add-on">@</span>
-				<? echo create_server_list($world['server_list']); ?>
+				<?php echo create_server_list($world['server_list']); ?>
 			</div>
 		</form>
     </div> <!-- /container -->
 	<!-- Fine Body -->
 	
 	<!-- FOOTER -->
-	 <? include('html_include/footer.php'); ?>
+	 <?php include('html_include/footer.php'); ?>
 	<!-- FINE FOOTER -->
 	</body>
 </html>

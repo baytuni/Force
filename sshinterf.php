@@ -8,7 +8,7 @@
 -->
 
 <!-- HTTPS CONTROL -->
-<?
+<?php
 
 	if(!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] == ""){
 		$redirect = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
@@ -18,7 +18,7 @@
 ?>
 
 <!-- SESSION CONTROL -->
-<? 
+<?php 
 	session_start(); 
 	include_once('globals.php');
 	$redirect = "https://".$_SERVER['HTTP_HOST']."/index.php";
@@ -31,17 +31,17 @@
 <html>
 <!-- ##################################### -->
 	<head>
-		<title>SSH | <? echo $world['ClusterName']; ?> | FORCE - Torque Web Interface</title>
+		<title>SSH | <?php echo $world['ClusterName']; ?> | FORCE - Torque Web Interface</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Styles and scripts -->
-	<? include('html_include/styles.php'); ?>
+	<?php include('html_include/styles.php'); ?>
 	
 <!-- ###################################### -->    
 	<body>
 	
 	<!-- Header and navigation bar -->
-	<? $active = 'ssh'; include('html_include/header.php'); ?>
+	<?php $active = 'ssh'; include('html_include/header.php'); ?>
 	<!-- Fine Header -->
 	
 	<!-- Body -->
@@ -63,7 +63,7 @@
 	<!-- Fine Body -->
 	
 	<!-- FOOTER -->
-	<? include('html_include/footer.php'); ?>
+	<?php include('html_include/footer.php'); ?>
 	<!-- FINE FOOTER -->
 	</body>
 </html>

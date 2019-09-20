@@ -1,4 +1,4 @@
-<?php
+<?<php
   /* File upload progress in PHP 5.4 */
   
   /* needs a 5.4+ version */
@@ -27,9 +27,9 @@
 
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 
-<?php if ( isset($_GET['iframe']) ): /* thank you Webkit... */ ?>
+<?<php if ( isset($_GET['iframe']) ): /* thank you Webkit... */ ?>
 <form action="" method="POST" enctype="multipart/form-data">
-  <input type="hidden" name="<?php echo ini_get("session.upload_progress.name"); ?>" value="demo">
+  <input type="hidden" name="<?<php echo ini_get("session.upload_progress.name"); ?>" value="demo">
   <input type="file" name="uploaded_file">
   <input type="submit" value="Upload">
 </form>
@@ -39,7 +39,7 @@ window.location.hash = ""; /* reset */
 jQuery("form").bind("submit", function() { window.location.hash = "uploading"; });
 </script>
 
-<?php else: ?>
+<?<php else: ?>
 
 <iframe src="?iframe" id="upload_form"></iframe>
 <script type="text/javascript">
@@ -68,4 +68,4 @@ jQuery("form").bind("submit", function() { window.location.hash = "uploading"; }
 </script>
 
 <div id="file_upload_progress"></div>
-<?php endif; ?>
+<?<php endif; ?>

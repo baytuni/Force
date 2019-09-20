@@ -1,4 +1,4 @@
-<?
+<?php
 function qstat_parser($string) {
 
 	$xml = simplexml_load_string($string);
@@ -278,7 +278,7 @@ $output .= '  </div>
 <!--</div>-->
 <hr/>
 
-<?
+<?php
 // Debug options :: qstat has to be modified before production
 if($debug) {
 	$qstat_cmd = 'cat $HOME/qstat.xml';

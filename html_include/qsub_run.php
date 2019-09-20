@@ -1,6 +1,6 @@
 <form class="form-actions"  method="POST" action="job_rerun.php" onSubmit="return popWindow(this.target)" target="Details">
 	<div class="input-prepend input-append">
-		<span class="add-on"><? echo '<strong>' . $_SESSION['username'] . ':~$ qsub</strong> ' . $_SESSION['home'] . '/ '; ?></span>  
+		<span class="add-on"><?php echo '<strong>' . $_SESSION['username'] . ':~$ qsub</strong> ' . $_SESSION['home'] . '/ '; ?></span>  
 		<input align="center"	class="input-block-level input-xxlarge" id="job_script_name" type="text" name="relative_path" 
 				placeholder="Insert script relative to your home path" >
 		<button type="submit" class="btn btn-primary input-append"><i class="icon-circle-arrow-right icon-white"></i> Launch!</button>
@@ -34,5 +34,5 @@ function popWindow(wName){
 }
 </script>
 
-<? include('html_include/tree_explorer.php'); ?>
+<?php include('html_include/tree_explorer.php'); ?>
 

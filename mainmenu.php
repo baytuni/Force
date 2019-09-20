@@ -8,7 +8,7 @@
 -->
 
 <!-- HTTPS CONTROL -->
-<?
+<?php
 
 	if(!isset($_SERVER['HTTPS']) || $_SERVER['HTTPS'] == ""){
 		$redirect = "https://".$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
@@ -18,7 +18,7 @@
 ?>
 
 <!-- SESSION CONTROL -->
-<? 
+<?php 
 	session_start(); 
 	include_once('globals.php');
 	$redirect = "https://".$_SERVER['HTTP_HOST']."/index.php";
@@ -31,17 +31,17 @@
 <html>
 <!-- ##################################### -->
 	<head>
-		<title>Home | <? echo $world['ClusterName']; ?> | FORCE - Torque Web Interface</title>
+		<title>Home | <?php echo $world['ClusterName']; ?> | FORCE - Torque Web Interface</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- Styles and scripts -->
-	<? include('html_include/styles.php'); ?>
+	<?php include('html_include/styles.php'); ?>
 	
 <!-- ###################################### -->    
 	<body>
 	
 	<!-- Header and navigation bar -->
-	<? $active = 'home'; include('html_include/header.php'); ?>
+	<?php $active = 'home'; include('html_include/header.php'); ?>
 	<!-- Fine Header -->
 	
 	<!-- Body -->
@@ -49,7 +49,7 @@
 		<div class="hero-unit">
 			<table width="100%"><tr>
 				<td align="left"><h1>Welcome!</h1></td>
-				<td align="right"><img src=<? echo $world['ClusterLogo']; ?> width="500px"></td>
+				<td align="right"><img src=<?php echo $world['ClusterLogo']; ?> width="500px"></td>
 			</tr></table>
 		</div>
 		<div class="row">
@@ -83,14 +83,14 @@
 			<div class="span4">
 				<h2>Ganglia</h2>
 				<p>Access the monitoring system to keep under control the whole cluster.</p>
-				<p><a class="btn btn-primary" href=<?echo $world['GangliaURL'];?> ><i class="icon-eye-open icon-white"></i> Go to Ganglia...</a></p>
+				<p><a class="btn btn-primary" href=<?phpecho $world['GangliaURL'];?> ><i class="icon-eye-open icon-white"></i> Go to Ganglia...</a></p>
 			</div>
 		</div>
     </div> <!-- /container -->
 	<!-- Fine Body -->
 	
 	<!-- FOOTER -->
-	<? include('html_include/footer.php'); ?>
+	<?php include('html_include/footer.php'); ?>
 	<!-- FINE FOOTER -->
 	</body>
 </html>

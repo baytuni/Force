@@ -1,4 +1,4 @@
-<?php 
+<?<php 
 
 /* Il seguente codice esplora la cartella utente, ipotizzando che la sessione sia già stata inizializzata
  * e quindi le variabili di sessione siano disponibili.

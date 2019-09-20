@@ -1,4 +1,4 @@
-<?
+<?php
 	$world['ClusterName']           = "X-CLUSTER";
 	$world['ClusterLogo']           = "img/x-cluster-logo.png";
 	$world['UniLogo']				= "img/unitn-logo.png";
@@ -7,11 +7,11 @@
 	$world['University']            = "Università degli studi di Trento";
 	$world['queue_list']			= array("batch","Another_queue1","Another_queue2");
 	$world['tmp']					= '/tmp';
-	$debug							= true;
+	$debug							= false;
 	
 	// List server
 	$world['server_list'][0] = 'localhost:22';
-	$world['server_list'][1] = '192.168.1.10:22';
+	$world['server_list'][1] = '192.168.10.209:22';
 	
 	// Bisogna ricordarsi di settare il parametro di upload_temp_dir
 	
